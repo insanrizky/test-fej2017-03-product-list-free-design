@@ -77,8 +77,10 @@ class Datasets extends Component{
     }
     
     listenScrollEvent(){
-        if(this.state.infiniteScroll.display === true){
-            if (document.body.scrollHeight === document.body.scrollTop + window.innerHeight) {
+        // console.log(document.body.scrollHeight - 20)
+        // console.log(document.body.scrollTop + window.innerHeight)
+        if (document.body.scrollHeight === document.body.scrollTop + window.innerHeight) {
+            if(this.state.infiniteScroll.display === true){
                 console.log("Bottom!");
 
                 var self = this
